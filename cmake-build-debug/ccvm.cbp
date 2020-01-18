@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ccvm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="H:/GITs/JVMlearning/ccvm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ccvm">
+				<Option output="H:/GITs/JVMlearning/ccvm/cmake-build-debug/ccvm.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="H:/GITs/JVMlearning/ccvm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 ccvm"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ccvm/fast">
+				<Option output="H:/GITs/JVMlearning/ccvm/cmake-build-debug/ccvm.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="H:/GITs/JVMlearning/ccvm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 ccvm/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="H:/GITs/JVMlearning/ccvm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="H:/GITs/JVMlearning/ccvm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/GITs/JVMlearning/ccvm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/main.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/ClassFile.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/ClassFile.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/FileReader.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/FileReader.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaClass.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaClass.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaClassLoader.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaClassLoader.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaType.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaType.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JClass.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JClass.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JException.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JException.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JRuntiemEnv/JRuntimeEnv.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JRuntiemEnv/JRuntimeEnv.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JType.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JType.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JArray.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JArray.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JObject.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JObject.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/NativeMethods/NativeMethods.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/NativeMethods/NativeMethods.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/interpreter/ByteCode.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JFrame.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JFrame.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JHeap.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JHeap.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/MethodArea.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/MethodArea.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
