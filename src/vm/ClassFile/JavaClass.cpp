@@ -70,7 +70,7 @@ void JavaClass::showJavaClassMsg() {
     cout<<"constPoolCount: "<<dec<<file.constPoolCount<<endl;
     cout<<"fieldsCount: "<<dec<<file.fieldsCount<<endl;
     for(int i=0;i<file.fieldsCount;i++){
-    cout<<"filedsName"<< dynamic_cast<CONSTANT_Utf8_info*>(file.constantPoolInfo[file.fields->nameIndex])->bytes<<endl;
+    cout<<"fieldsName: "<< dynamic_cast<CONSTANT_Utf8_info*>(file.constantPoolInfo[file.fields[i].descriptorIndex])->bytes<<endl;
     }
     cout<<"methodCount: "<<dec<<file.methodsCount<<endl;
     for(int i = 0;i<(int)file.methodsCount;i++){
@@ -836,4 +836,16 @@ ElementValue* JavaClass::readToElementValueStructure() {
             t->typeArgumentIndex = reader.readU1();
             return t;
         }
+}
+
+MethodInfo *JavaClass::findMethod(const string &methodName, const string &methodDescriptor) const {
+    return nullptr;
+}
+
+JType *JavaClass::getStaticVar(const string &name, const string &descriptor) {
+    return nullptr;
+}
+
+bool JavaClass::setStaticVar(const string &name, const string &descriptor, JType *value) {
+    return false;
 }

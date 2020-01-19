@@ -127,16 +127,16 @@
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JException.h">
 			<Option target="ccvm"/>
 		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JException/JExceptions.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JException/JExceptions.h">
+			<Option target="ccvm"/>
+		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JRuntiemEnv/JRuntimeEnv.cpp">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JRuntiemEnv/JRuntimeEnv.h">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JType.cpp">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JType.h">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JArray.cpp">
@@ -149,6 +149,12 @@
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JObject.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JType.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JType.h">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/NativeMethods/NativeMethods.cpp">

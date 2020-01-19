@@ -169,10 +169,10 @@ struct ClassFile{
         if (methodsCount > 0) {
             delete[] methods;
         }
-
         FOR_EACH(i, attributesCount) { delete attributes[i]; }
         delete[] attributes;
     }
+
 };
 
 #define IS_ATTR_ConstantValue(PTR) if (strcmp(PTR, "ConstantValue") == 0)

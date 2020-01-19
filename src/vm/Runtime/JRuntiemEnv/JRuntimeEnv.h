@@ -6,11 +6,16 @@
 #define CCVM_JRUNTIMEENV_H
 
 
+#include "../../memory/JHeap.h"
+
 class JRuntimeEnv {
     JRuntimeEnv();
-    ~JRuntimeEnv();
+    JRuntimeEnv(const vector<string> paths);
+    ~JRuntimeEnv()= default;
 
-
+public:
+    JHeap* heap;
+    MethodArea* methodArea;
 
 };
 

@@ -3,3 +3,9 @@
 //
 
 #include "JRuntimeEnv.h"
+
+JRuntimeEnv::JRuntimeEnv(const vector<string> paths) {
+    this->methodArea = new MethodArea(paths);
+    this->heap = new JHeap;
+
+}
