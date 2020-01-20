@@ -30,16 +30,16 @@ class JInt : public JType{
     int64_t i;
 };
 class JLong : public JType{
-    long l;
+    long i;
 };
 class JDouble : public JType{
-    double d = 0;
+    double i;
 };
 class JFloat : public JType{
-    float  f;
+    float  i;
 };
 class JBoolean : public JType{
-    bool b;
+    bool i;
 };
 class JArray : public JType{
       explicit JArray()= default;
