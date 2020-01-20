@@ -45,12 +45,15 @@ private:
     JFrame* nextFrame;
 };
 class JNativeMethodStack{
-    JNativeMethodStack()= default;
     ~JNativeMethodStack()= default;
-    void newFrame(uint32_t maxLocalVar,uint32_t maxStack);
+
+
+
+public:
+    JNativeMethodStack()= default;
     void popFrame();
     JFrame* top(){ return topFrame;};
-
+    void newFrame(uint32_t maxLocalVar,uint32_t maxStack);
 
 private:
     vector<JFrame*> stack;

@@ -89,5 +89,6 @@ void JNativeMethodStack::newFrame(uint32_t maxLocalVar, uint32_t maxStack) {
 void JNativeMethodStack::popFrame() {
     auto* f = topFrame;
     topFrame=topFrame->nextFrame;
+    stack.pop_back();
     delete(f);
 }
