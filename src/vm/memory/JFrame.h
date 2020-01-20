@@ -49,7 +49,7 @@ class JNativeMethodStack{
     ~JNativeMethodStack()= default;
     void newFrame(uint32_t maxLocalVar,uint32_t maxStack);
     void popFrame();
-    JFrame* top(){ return topFrame};
+    JFrame* top(){ return topFrame;};
 
 
 private:

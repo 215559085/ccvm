@@ -103,24 +103,6 @@
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaClass.h">
 			<Option target="ccvm"/>
 		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaClassLoader.cpp">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaClassLoader.h">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaType.cpp">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/JavaType.h">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JClass.cpp">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JClass.h">
-			<Option target="ccvm"/>
-		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JException.cpp">
 			<Option target="ccvm"/>
 		</Unit>
@@ -137,18 +119,6 @@
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JRuntiemEnv/JRuntimeEnv.h">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JArray.cpp">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JArray.h">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JObject.cpp">
-			<Option target="ccvm"/>
-		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JObject.h">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/Runtime/JavaTypes/JType.cpp">
@@ -182,6 +152,12 @@
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/MethodArea.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/misc/Utils.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/misc/Utils.h">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/CMakeLists.txt">

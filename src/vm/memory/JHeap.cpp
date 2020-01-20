@@ -76,19 +76,19 @@ JObject* JHeap::JavaNewCreatObj(JavaClass* javaClass) {
 }
 
 void JHeap::creatSuperFields(const JavaClass& jc,JObject* object) {
-    if(jc.file.superClass!=0){
-        JavaClass* super = methodArea->findJavaClass(jc.getSuperClassName());
+    if (jc.file.superClass != 0) {
+        JavaClass *super = methodArea->findJavaClass(jc.getSuperClassName());
         //std::cout<<"superClassName: "<<super->getClassName()<<endl;
         //std::cout<<"superFieldsOffset: "<<super->file.fieldsCount<<endl;
-      for(int fieldsOffset=0;fieldsOffset < (super->file.fieldsCount);fieldsOffset++){
-          const string des = super->getString(super->file.fields[fieldsOffset].descriptorIndex);
-          //std::cout<<"superFields: "<<des<<endl;
-          typeDetermineControl(des,object);
-      if(super->file.superClass != 0){
-          creatSuperFields(*super,object);
-      }
+        for (int fieldsOffset = 0; fieldsOffset < (super->file.fieldsCount); fieldsOffset++) {
+            const string des = super->getString(super->file.fields[fieldsOffset].descriptorIndex);
+            //std::cout<<"superFields: "<<des<<endl;
+            typeDetermineControl(des, object);
+            if (super->file.superClass != 0) {
+                creatSuperFields(*super, object);
+            }
+        }
     }
 }
-
 
 
