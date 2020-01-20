@@ -2,12 +2,15 @@
 // Created by Admin on 2020/1/18.
 //
 
+
 #ifndef CCVM_JTYPE_H
 #define CCVM_JTYPE_H
-
 #include <stdint-gcc.h>
 #include <vector>
 #include "../../ClassFile/JavaClass.h"
+using namespace std;
+
+class JavaClass;
 
 class JType {
 public:
@@ -43,13 +46,14 @@ class JArray : public JType{
       int len = 0;
       uint64_t offset=0;
 };
+
 class JObject : public JType{
 public:
     uint64_t offset=0;
     const JavaClass* javaClassFile{};
     vector<JType*> fields;
     explicit JObject()= default;
-    ~JObject(){delete(javaClassFile);}
+    ~JObject()= default;
 
 };
 #endif //CCVM_JTYPE_H

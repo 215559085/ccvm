@@ -16,7 +16,6 @@ class JRuntimeEnv {
 public:
     JHeap* heap;
     MethodArea* methodArea;
-
 };
 
 

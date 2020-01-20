@@ -115,7 +115,6 @@ struct FieldInfo {
     u2 descriptorIndex;
     u2 attributeCount;
     AttributeInfo** attributes;
-
     ~FieldInfo() {
         FOR_EACH(i, attributeCount) { delete attributes[i]; }
         if (attributeCount > 0) {

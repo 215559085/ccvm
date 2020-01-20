@@ -25,7 +25,6 @@ public:
     // reading mode
     FileReader(const std::string& filePath) : fin(filePath, std::ios::binary) {
         this->filePath = filePath;
-
     }
     ~FileReader(){fin.close();}
     u4

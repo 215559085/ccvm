@@ -57,17 +57,22 @@ void JavaClass::parseClassFile() {
     if (!reader.haveNoExtraBytes()) {
         cerr << __func__ << ":Extra bytes existed in class file\n";
     }
+
     return;
 
     error:
     cerr<<"parseClassFileErorr"<<endl;
 }
 
-void JavaClass::showJavaClassMsg() {
+void JavaClass::showJavaClassMsg() const {
     cout<<"magic: "<<hex<<file.magic<<endl;
     cout<<"majorV: "<<hex<<file.majorVersion<<endl;
     cout<<"minorV: "<<hex<<file.minorVersion<<endl;
     cout<<"constPoolCount: "<<dec<<file.constPoolCount<<endl;
+    cout<<"accessFlags: "<<file.accessFlags<<endl;
+    cout<<"thisClass: "<<file.thisClass<<endl;
+    cout<<"superClass: "<<file.superClass<<endl;
+    cout<<"superClassName: "<<this->getSuperClassName()<<endl;
     cout<<"fieldsCount: "<<dec<<file.fieldsCount<<endl;
     for(int i=0;i<file.fieldsCount;i++){
     cout<<"fieldsName: "<< dynamic_cast<CONSTANT_Utf8_info*>(file.constantPoolInfo[file.fields[i].descriptorIndex])->bytes<<endl;
@@ -250,12 +255,10 @@ void JavaClass::parseFields(u2 fields_count) {
 
 void JavaClass::parseAttribute(AttributeInfo** (&attrs),u2 attr_count) {
       attrs = new(std::nothrow) AttributeInfo*[attr_count];
-
       if(attrs == nullptr){
           cerr << "new Attr** error"<< endl;
           return;
       }
-
       for(uint16_t i=0;i<attr_count;i++){
           const u2 attrStringIndex = reader.readU2();
           if (typeid(*file.constantPoolInfo[attrStringIndex]) != typeid(CONSTANT_Utf8_info)){

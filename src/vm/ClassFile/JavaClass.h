@@ -18,6 +18,7 @@
 #include <map>
 
 using namespace std;
+class JType;
 
 class JavaClass{
 public:
@@ -26,7 +27,7 @@ public:
     ~JavaClass();
 
     void parseClassFile();
-    void showJavaClassMsg();
+    void showJavaClassMsg() const;
     void parseConstantPool(u2 cp_count);
     void parseInterface(u2 interface_count);
     void parseFields(u2 fields_count);
@@ -34,7 +35,7 @@ public:
     inline string getString(u2 offset) const{
         return reinterpret_cast<const char*>(dynamic_cast<CONSTANT_Utf8_info*>(file.constantPoolInfo[offset])->bytes);
     }
-    inline string getClassName(){
+    inline string getClassName() const {
         return getString(dynamic_cast<CONSTANT_Class*>(file.constantPoolInfo[file.thisClass])->nameIndex);
     }
     inline const string getSuperClassName() const {

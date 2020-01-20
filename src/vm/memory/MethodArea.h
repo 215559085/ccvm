@@ -9,7 +9,8 @@
 #include <vector>
 #include <unordered_map>
 #include "../ClassFile/JavaClass.h"
-
+#include "JHeap.h"
+class JHeap;
 class MethodArea {
     ~MethodArea(){classMap.clear();delete[] linkedClassFiles;delete[] initedClassFiles;};
 private:
@@ -17,15 +18,20 @@ private:
     JavaClass** linkedClassFiles;
     JavaClass** initedClassFiles;
     vector<string> searchPaths;
+
 public:
+    explicit MethodArea(const vector<string>& libPaths);
+    explicit MethodArea();
     JavaClass* findJavaClass(const string& className);
     bool loadClass(const char* className);
+    bool loadClass(const string& path);
     bool removeClass(const char* className);
     bool linkClass(const char* className);
     bool initClass(const char* className);
-    MethodArea(const vector<string> libPaths);
-
+    JHeap* jHeap;
     string className2Path(const string &name);
+
+    bool loadClassFromPath(const string &path);
 };
 
 
