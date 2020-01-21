@@ -10,7 +10,14 @@ int add(int* nums,int a,int length){
     if(a<length){result += nums[a] + add(nums,a+1,length);}
     return result;
 }
+void op_pops(JNativeMethodStack* stack){
+    stack->top()->popVarFromLocalVarStackTop<JType>();
+}
 int main(){
+
+    void (*p1[256])(JNativeMethodStack*);
+    p1[0] = op_pops;
+
     string filepath = R"(H:\GITs\JByteCode\out\production\JByteCode\Main.class)";
     //auto* javaClass = new JavaClass(filepath);
     //javaClass->parseClassFile();

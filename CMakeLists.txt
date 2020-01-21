@@ -27,4 +27,4 @@ add_executable(ccvm
         src/vm/memory/MethodArea.cpp
         src/vm/memory/MethodArea.h
         src/vm/Runtime/JException/JExceptions.cpp
-        src/vm/Runtime/JException/JExceptions.h src/vm/misc/Utils.cpp src/vm/misc/Utils.h)
+        src/vm/Runtime/JException/JExceptions.h src/vm/misc/Utils.cpp src/vm/misc/Utils.h src/vm/interpreter/ByteCodeInterpreter.cpp src/vm/interpreter/ByteCodeInterpreter.h src/vm/interpreter/Operations.cpp src/vm/interpreter/Operations.h)
