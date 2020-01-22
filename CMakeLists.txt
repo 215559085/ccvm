@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+
 project(ccvm)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -27,4 +27,14 @@ add_executable(ccvm
         src/vm/memory/MethodArea.cpp
         src/vm/memory/MethodArea.h
         src/vm/Runtime/JException/JExceptions.cpp
-        src/vm/Runtime/JException/JExceptions.h src/vm/misc/Utils.cpp src/vm/misc/Utils.h src/vm/interpreter/ByteCodeInterpreter.cpp src/vm/interpreter/ByteCodeInterpreter.h src/vm/interpreter/Operations.cpp src/vm/interpreter/Operations.h)
+        src/vm/Runtime/JException/JExceptions.h
+        src/vm/misc/Utils.cpp
+        src/vm/misc/Utils.h
+        src/vm/memory/JNativeMethodStack.cpp
+        src/vm/memory/JNativeMethodStack.h
+        src/vm/interpreter/SymbloicRef.cpp
+        src/vm/interpreter/SymbloicRef.h
+        src/vm/ClassFile/AccessFlag.cpp
+        src/vm/ClassFile/AccessFlag.h
+        src/vm/interpreter/ByteCodeInterpreter.cpp
+        src/vm/interpreter/ByteCodeInterpreter.h)

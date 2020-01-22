@@ -2,7 +2,10 @@
 #include "vm/ClassFile/JavaClass.h"
 #include "vm/memory/MethodArea.h"
 #include "vm/memory/JFrame.h"
+#include "vm/memory/JNativeMethodStack.h"
+#include "vm/Runtime/JRuntiemEnv/JRuntimeEnv.h"
 
+JRuntimeEnv* jRuntimeEnv;
 
 using namespace std;
 int add(int* nums,int a,int length){
@@ -10,14 +13,7 @@ int add(int* nums,int a,int length){
     if(a<length){result += nums[a] + add(nums,a+1,length);}
     return result;
 }
-void op_pops(JNativeMethodStack* stack){
-    stack->top()->popVarFromLocalVarStackTop<JType>();
-}
 int main(){
-
-    void (*p1[256])(JNativeMethodStack*);
-    p1[0] = op_pops;
-
     string filepath = R"(H:\GITs\JByteCode\out\production\JByteCode\Main.class)";
     //auto* javaClass = new JavaClass(filepath);
     //javaClass->parseClassFile();
@@ -25,12 +21,12 @@ int main(){
     //map.insert(make_pair(20,javaClass));
     //auto p = map.find(20);
     //cout<<"outermap: "<<p->second->getClassName()<<endl;
-    auto* methodArea = new MethodArea();
-    methodArea->loadClassFromPath(R"(H:\GITs\JVMlearning\yvm\bytecode\java\lang\Object.class)");
-    methodArea->loadClassFromPath(filepath);
-    auto* object=methodArea->jHeap->JavaNewCreatObj(methodArea->findJavaClass("Main"));
+    jRuntimeEnv = new JRuntimeEnv();
+    jRuntimeEnv->methodArea->loadClassFromPath(R"(H:\GITs\JVMlearning\yvm\bytecode\java\lang\Object.class)");
+    jRuntimeEnv->methodArea->loadClassFromPath(filepath);
+    auto* object=jRuntimeEnv->heap->JavaNewCreatObj(jRuntimeEnv->methodArea->findJavaClass("Main"));
     object->javaClassFile->showJavaClassMsg();
-    JNativeMethodStack* stack = new JNativeMethodStack{};
+    auto* stack = new JNativeMethodStack{};
     stack->newFrame(20,20);
     stack->newFrame(30,30);
     stack->popFrame();

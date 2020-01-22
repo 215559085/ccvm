@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include "JHeap.h"
+#include "../Runtime/JRuntiemEnv/JRuntimeEnv.h"
+
 void JHeap::typeDetermineControl(const string &des, JObject *obj) {
     if(des[0] == 'L'){//class
         JObject* f = nullptr;
@@ -63,9 +65,9 @@ JObject* JHeap::JavaNewCreatObj(JavaClass* javaClass) {
         //std::cout<<"fields: "<<des[0]<<endl;
         typeDetermineControl(des,obj);
     }
-    //std::cout<<"startSuper"<<endl;
-    creatSuperFields(*javaClass,obj);
-    //std::cout<<"stopSuper"<<endl;
+    std::cout<<"startSuper"<<endl;
+    creatSuperFields(javaClass,obj);
+    std::cout<<"stopSuper"<<endl;
     //std::cout<<"container: "<<data->getContainer()->size()<<endl;
     data->getContainer()->insert(make_pair(now_offset,(JType*)obj));
     //std::cout<<"container: "<<data->getContainer()->size()<<endl;
@@ -75,20 +77,53 @@ JObject* JHeap::JavaNewCreatObj(JavaClass* javaClass) {
     return obj;
 }
 
-void JHeap::creatSuperFields(const JavaClass& jc,JObject* object) {
-    if (jc.file.superClass != 0) {
-        JavaClass *super = methodArea->findJavaClass(jc.getSuperClassName());
-        //std::cout<<"superClassName: "<<super->getClassName()<<endl;
+void JHeap::creatSuperFields(JavaClass* jc,JObject* object) {
+    if (jc->file.superClass != 0) {
+        std::cout<<"needToFind superClassName: "<<jc->getClassName()<<endl;
+        JavaClass *super = jRuntimeEnv->methodArea->findJavaClass(jc->getSuperClassName());
+        std::cout<<"superClassName: "<<super->getClassName()<<endl;
         //std::cout<<"superFieldsOffset: "<<super->file.fieldsCount<<endl;
         for (int fieldsOffset = 0; fieldsOffset < (super->file.fieldsCount); fieldsOffset++) {
             const string des = super->getString(super->file.fields[fieldsOffset].descriptorIndex);
             //std::cout<<"superFields: "<<des<<endl;
             typeDetermineControl(des, object);
             if (super->file.superClass != 0) {
-                creatSuperFields(*super, object);
+                creatSuperFields(super, object);
             }
         }
     }
+}
+
+JType* JHeap::getElement(JArray array, int64_t i) {
+	return nullptr;
+}
+
+JType *JHeap::getFieldByName(JavaClass *pClass, string basicString, string basicString1, JObject *pObject) {
+    return nullptr;
+}
+
+void JHeap::putFieldByName(JavaClass *pClass, string basicString, string basicString1, JObject *pObject, JType *pType) {
+
+}
+
+void JHeap::putFieldByOffset(JObject object, int i, JArray *pArray) {
+
+}
+
+JArray *JHeap::JavaNewCreatCharArray(const string &source, uint64_t len) {
+    return nullptr;
+}
+
+void JHeap::putElement(JType jType, int index, JType *value) {
+
+}
+
+JArray *JHeap::JavaNewCreatObjArray(JavaClass &javaClass, int len) {
+    return nullptr;
+}
+
+JArray *JHeap::JavaNewCreatPODArray(int type, int len) {
+    return nullptr;
 }
 
 

@@ -22,7 +22,18 @@ JavaClass::~JavaClass() {
 JavaClass::JavaClass(const JavaClass &rhs) {
      file = rhs.file;
 }
+vector<u2> JavaClass::getInterfacesIndex() const {
+    if (file.interfacesCount == 0) return vector<u2>();
+    vector<u2> v;
+    FOR_EACH(i, file.interfacesCount) {
+        v.push_back(
+                dynamic_cast<CONSTANT_Class*>(file.constantPoolInfo[file.interfaces[i]])
+                        ->nameIndex);
+    }
+    return v;
+}
 void JavaClass::parseClassFile() {
+    //std::cout<<"parsing className: "<< &getClassName()<<endl;
     file.magic = reader.readU4();
     if(file.magic != 0xCAFEBABE){
         std::cout<<"Not a java class file,stopped"<<endl;
@@ -72,7 +83,7 @@ void JavaClass::showJavaClassMsg() const {
     cout<<"accessFlags: "<<file.accessFlags<<endl;
     cout<<"thisClass: "<<file.thisClass<<endl;
     cout<<"superClass: "<<file.superClass<<endl;
-    cout<<"superClassName: "<<this->getSuperClassName()<<endl;
+    //cout<<"superClassName: "<<(this->getSuperClassName())<<endl;
     cout<<"fieldsCount: "<<dec<<file.fieldsCount<<endl;
     for(int i=0;i<file.fieldsCount;i++){
     cout<<"fieldsName: "<< dynamic_cast<CONSTANT_Utf8_info*>(file.constantPoolInfo[file.fields[i].descriptorIndex])->bytes<<endl;

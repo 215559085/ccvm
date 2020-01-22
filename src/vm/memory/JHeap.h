@@ -7,9 +7,10 @@
 
 
 #include "../Runtime/JavaTypes/JType.h"
-#include "MethodArea.h"
 #include <map>
 #include <vector>
+
+
 //GC ROOT
 class MethodArea;
 template<typename T> class JHeapContainer{
@@ -45,7 +46,8 @@ public:
     JHeap(){this->data=new JHeapContainer<JType>();};
     ~JHeap()= default;
     JObject* JavaNewCreatObj(JavaClass* javaClass);
-    void creatSuperFields(const JavaClass& super,JObject* thisClass);
+    void creatSuperFields(JavaClass* super,JObject* thisClass);
+    void putElement(JType jType,int index,JType* value);
     JArray* JavaNewCreatPODArray(int type,int len);
     JArray* JavaNewCreatObjArray(JavaClass& javaClass,int len);
     JArray* JavaNewCreatCharArray(const string& source,uint64_t len);
@@ -54,13 +56,23 @@ public:
     JArray* JavaRootNewCreatPODArray(int type,int len);
     JArray* JavaRootNewCreatObjArray(JavaClass& javaClass,int len);
     JArray* JavaRootNewCreatCharArray(const string& source,uint64_t len);
-    void setMethodArea(MethodArea* methodArea1){methodArea=methodArea1;}
+
+
+    JType* getElement(const JArray array, int64_t i);
+
+    JType *getFieldByName(JavaClass *pClass, string basicString, string basicString1, JObject *pObject);
+
+    void putFieldByName(JavaClass *pClass, string basicString, string basicString1, JObject *pObject, JType *pType);
+
+    void putFieldByOffset(JObject object, int i, JArray *pArray);
+
+    void setMethodArea(MethodArea *pArea);
+
 private:
     static void typeDetermineControl(const string& des,JObject* obj);
     JHeapContainer<JType>* data;
     //JHeapContainerSet* data;
     uint64_t now_offset = 0;
-    MethodArea* methodArea;
 };
 
 #endif //CCVM_JHEAP_H

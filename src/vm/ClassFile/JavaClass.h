@@ -32,10 +32,10 @@ public:
     void parseInterface(u2 interface_count);
     void parseFields(u2 fields_count);
     void parseAttribute(AttributeInfo** (&attrs),u2 attr_count);
-    inline string getString(u2 offset) const{
+    inline const string getString(u2 offset) const{
         return reinterpret_cast<const char*>(dynamic_cast<CONSTANT_Utf8_info*>(file.constantPoolInfo[offset])->bytes);
     }
-    inline string getClassName() const {
+    inline const string getClassName() const {
         return getString(dynamic_cast<CONSTANT_Class*>(file.constantPoolInfo[file.thisClass])->nameIndex);
     }
     inline const string getSuperClassName() const {
@@ -59,6 +59,9 @@ public:
     JType* getStaticVar(const string& name, const string& descriptor);
     VerificationTypeInfo* parseVerificationType(u1 tag);
     ClassFile file{};
+
+    vector<u2> getInterfacesIndex() const;
+
 private:
     //FileReader
 
@@ -68,6 +71,7 @@ private:
     Annotation readToAnnotationStructure();
     TargetInfo *determineTargetType(u1 tag);
     bool parseMethod(u2 methodCount);
+
 };
 
 

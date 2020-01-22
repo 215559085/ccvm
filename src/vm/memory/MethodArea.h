@@ -9,17 +9,19 @@
 #include <vector>
 #include <unordered_map>
 #include "../ClassFile/JavaClass.h"
-#include "JHeap.h"
-class JHeap;
+//#include "../interpreter/ByteCodeInterpreter.h"
+
+class ByteCodeInterpreter;
 class MethodArea {
-    ~MethodArea(){classMap.clear();delete[] linkedClassFiles;delete[] initedClassFiles;};
+    ~MethodArea(){classMap->clear();delete[] linkedClassFiles;delete[] initedClassFiles;};
 private:
-    unordered_map<string,JavaClass*> classMap;
+
     JavaClass** linkedClassFiles;
     JavaClass** initedClassFiles;
     vector<string> searchPaths;
 
 public:
+    unordered_map<string,JavaClass*>* classMap;
     explicit MethodArea(const vector<string>& libPaths);
     explicit MethodArea();
     JavaClass* findJavaClass(const string& className);
@@ -28,10 +30,14 @@ public:
     bool removeClass(const char* className);
     bool linkClass(const char* className);
     bool initClass(const char* className);
-    JHeap* jHeap;
+    void linkClassIfAbsent(const string& jcName);
+    void initClassIfAbsent(ByteCodeInterpreter& exec, const string& jcName);
     string className2Path(const string &name);
 
     bool loadClassFromPath(const string &path);
+
+    JavaClass * loadClassIfAbsent(const string basicString);
+
 };
 
 

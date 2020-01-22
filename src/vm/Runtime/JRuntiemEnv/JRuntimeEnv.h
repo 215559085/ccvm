@@ -7,16 +7,19 @@
 
 
 #include "../../memory/JHeap.h"
-
+#include "../../memory/MethodArea.h"
+class JHeap;
+class MethodArea;
 class JRuntimeEnv {
-    JRuntimeEnv();
+public:
+    JRuntimeEnv(){heap=new JHeap;methodArea=new MethodArea;};
     JRuntimeEnv(const vector<string> paths);
     ~JRuntimeEnv()= default;
 
-public:
     JHeap* heap;
     MethodArea* methodArea;
 };
 
+extern JRuntimeEnv* jRuntimeEnv;
 
 #endif //CCVM_JRUNTIMEENV_H
