@@ -437,3 +437,7 @@ void ByteCodeInterpreter::invokeSpecial(JavaClass *pClass, string basicString, s
 void ByteCodeInterpreter::invokeInterface(JavaClass *pClass, string basicString, string basicString1) {
 
 }
+void ByteCodeInterpreter::invokeByName(JavaClass *jc, const string &name,
+                               const string &descriptor){
+
+}

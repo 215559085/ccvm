@@ -62,11 +62,12 @@ public:
 
     vector<u2> getInterfacesIndex() const;
 
+    std::map<size_t, JType*> staticVars;
 private:
     //FileReader
 
     FileReader reader;
-    std::map<size_t, char*> staticVars;
+
     ElementValue *readToElementValueStructure();
     Annotation readToAnnotationStructure();
     TargetInfo *determineTargetType(u1 tag);

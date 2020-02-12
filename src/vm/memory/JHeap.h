@@ -1,5 +1,5 @@
 //
-// Created by Admin on 2020/1/18.
+// Created by ChiCex on 2020/1/18.
 //
 
 #ifndef CCVM_JHEAP_H
@@ -60,13 +60,12 @@ public:
 
     JType* getElement(const JArray array, int64_t i);
 
-    JType *getFieldByName(JavaClass *pClass, string basicString, string basicString1, JObject *pObject);
+    JType* getFieldByName(JavaClass *pClass, string basicString, string basicString1, JObject *pObject);
 
     void putFieldByName(JavaClass *pClass, string basicString, string basicString1, JObject *pObject, JType *pType);
 
     void putFieldByOffset(JObject object, int i, JArray *pArray);
 
-    void setMethodArea(MethodArea *pArea);
 
 private:
     static void typeDetermineControl(const string& des,JObject* obj);

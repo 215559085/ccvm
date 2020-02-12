@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\vm",
+    "\\src\\vm\\ClassFile",
+    "\\src\\vm\\memory"
+  ],
+  "SelectedNode": "\\src\\vm\\memory\\MethodArea.cpp",
+  "PreviewInSolutionExplorer": false
+}

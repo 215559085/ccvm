@@ -56,9 +56,9 @@ void JHeap::typeDetermineControl(const string &des, JObject *obj) {
 }
 
 
-JObject* JHeap::JavaNewCreatObj(JavaClass* javaClass) {
+JObject*  JHeap::JavaNewCreatObj(JavaClass* javaClass){
     auto* obj=new JObject;
-    obj->javaClassFile=javaClass;
+    obj->javaClassFile = javaClass;
     obj->offset=now_offset;
     for(int fieldsOffset=0;fieldsOffset < javaClass->file.fieldsCount;fieldsOffset++){
         const string& des = javaClass->getString(javaClass->file.fields[fieldsOffset].descriptorIndex);

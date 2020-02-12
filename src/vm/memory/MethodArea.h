@@ -8,16 +8,17 @@
 
 #include <vector>
 #include <unordered_map>
+#include <unordered_set>
 #include "../ClassFile/JavaClass.h"
 //#include "../interpreter/ByteCodeInterpreter.h"
 
 class ByteCodeInterpreter;
 class MethodArea {
-    ~MethodArea(){classMap->clear();delete[] linkedClassFiles;delete[] initedClassFiles;};
+    ~MethodArea(){classMap->clear();linkedClassFiles.clear();initedClassFiles.clear();};
 private:
 
-    JavaClass** linkedClassFiles;
-    JavaClass** initedClassFiles;
+    unordered_set<string> linkedClassFiles;
+    unordered_set<string> initedClassFiles;
     vector<string> searchPaths;
 
 public:
@@ -25,7 +26,6 @@ public:
     explicit MethodArea(const vector<string>& libPaths);
     explicit MethodArea();
     JavaClass* findJavaClass(const string& className);
-    bool loadClass(const char* className);
     bool loadClass(const string& path);
     bool removeClass(const char* className);
     bool linkClass(const char* className);
@@ -38,6 +38,11 @@ public:
 
     JavaClass * loadClassIfAbsent(const string basicString);
 
+    bool initClass(ByteCodeInterpreter &exec, const string &jcName);
+
+    bool loadClass(const string &path, bool fromPath);
+
+    bool loadClass(const char *className);
 };
 
 

@@ -1451,6 +1451,8 @@ public:
     JObject *execNew(const JavaClass *jc, u2 index);
 
     bool checkInstanceof(const JavaClass *jc, u2 index, JType *objectref);
+
+    void invokeByName(JavaClass *jc, const string &name, const string &descriptor);
 };
 
 

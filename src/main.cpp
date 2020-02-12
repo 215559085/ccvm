@@ -24,13 +24,16 @@ int main(){
     jRuntimeEnv = new JRuntimeEnv();
     jRuntimeEnv->methodArea->loadClassFromPath(R"(H:\GITs\JVMlearning\yvm\bytecode\java\lang\Object.class)");
     jRuntimeEnv->methodArea->loadClassFromPath(filepath);
-    auto* object=jRuntimeEnv->heap->JavaNewCreatObj(jRuntimeEnv->methodArea->findJavaClass("Main"));
+    JObject* object=jRuntimeEnv->heap->JavaNewCreatObj(jRuntimeEnv->methodArea->findJavaClass("Main"));
     object->javaClassFile->showJavaClassMsg();
     auto* stack = new JNativeMethodStack{};
     stack->newFrame(20,20);
     stack->newFrame(30,30);
     stack->popFrame();
     stack->popFrame();
+    uint32_t a=5,b=6,c=7,d=8,m=2,n=2;
+    (m=a>b)&&(n=c>d);
+    cout<<n<<endl;
 
     return 0;
 }

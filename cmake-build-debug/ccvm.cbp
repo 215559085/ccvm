@@ -85,6 +85,12 @@
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/main.cpp">
 			<Option target="ccvm"/>
 		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/AccessFlag.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/AccessFlag.h">
+			<Option target="ccvm"/>
+		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/ClassFile/ClassFile.cpp">
 			<Option target="ccvm"/>
 		</Unit>
@@ -136,22 +142,43 @@
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/interpreter/ByteCode.h">
 			<Option target="ccvm"/>
 		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/interpreter/ByteCodeInterpreter.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/interpreter/ByteCodeInterpreter.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/interpreter/SymbloicRef.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/interpreter/SymbloicRef.h">
+			<Option target="ccvm"/>
+		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JFrame.cpp">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JFrame.h">
 			<Option target="ccvm"/>
 		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JHeap.cpp">
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JHeap.h">
 			<Option target="ccvm"/>
 		</Unit>
-		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JHeap.h">
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JNativeMethodStack.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/JNativeMethodStack.h">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/MethodArea.cpp">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/MethodArea.h">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/jheap.cpp">
+			<Option target="ccvm"/>
+		</Unit>
+		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/memory/jheap.h">
 			<Option target="ccvm"/>
 		</Unit>
 		<Unit filename="H:/GITs/JVMlearning/ccvm/src/vm/misc/Utils.cpp">

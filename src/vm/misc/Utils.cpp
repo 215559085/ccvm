@@ -43,3 +43,20 @@ JType* cloneValue(JType* value) {
     }
     return dupvalue;
 }
+
+JType* determineBasicType(const std::string& type) {
+    if (IS_FIELD_INT(type) || IS_FIELD_BYTE(type) || IS_FIELD_CHAR(type) ||
+        IS_FIELD_SHORT(type) || IS_FIELD_BOOL(type)) {
+        return new JInt;
+    }
+    if (IS_FIELD_DOUBLE(type)) {
+        return new JDouble;
+    }
+    if (IS_FIELD_FLOAT(type)) {
+        return new JFloat;
+    }
+    if (IS_FIELD_LONG(type)) {
+        return new JLong;
+    }
+    return nullptr;
+}
